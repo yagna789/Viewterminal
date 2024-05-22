@@ -1,0 +1,93 @@
+.sidebar {
+    position: fixed;
+    top: 64px; /* Adjusted for the header height */
+    left: 0;
+    height: calc(100% - 64px); /* Adjusted for the header height */
+    width: 16rem;
+    background-color: #2d3748; /* Tailwind bg-gray-800 */
+    color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 20;
+  }
+  
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+  /* Add any additional styling you may need */
+  .sidebar .p-4 {
+    padding: 1rem;
+  }
+  
+  .sidebar button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s;
+  }
+  
+  .sidebar button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar .mt-2 {
+    margin-top: 0.5rem;
+  }
+  
+  .sidebar .ml-4 {
+    margin-left: 1rem;
+  }
+  
+  .sidebar .space-y-2 > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  
+  .sidebar .text-left {
+    text-align: left;
+  }
+  
+  .sidebar .text-white {
+    color: white;
+  }
+  
+  .sidebar .w-full {
+    width: 100%;
+  }
+  
+  .sidebar .mr-2 {
+    margin-right: 0.5rem;
+  }
+  
+  .sidebar .h-4 {
+    height: 1rem;
+  }
+  
+  .sidebar .w-4 {
+    width: 1rem;
+  }
+  .main {
+    margin-left: 16rem; /* Match the sidebar width */
+    width: calc(100vw - 16rem); /* Adjust width for sidebar */
+    height: calc(100vh -4px); /* Adjust height for header */
+    position: relative;
+    top: 0; /* Adjust for the header height */
+    overflow: hidden; /* Ensure no overflow */
+  }  
+
+
+  .main {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 0;
+    height: calc(100vh - 64px); /* Adjust height for header */
+  }
+  
+  .mainWithSidebar {
+    margin-left: 16rem; /* Match the sidebar width */
+  }
